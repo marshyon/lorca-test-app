@@ -1,0 +1,87 @@
+
+/* .body {
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* .sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+.monospace {
+    font-family: Lucida Console, Courier, monospace;
+}
+
+.wrapper {
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+  
+    max-width: 960px; /* 2 */
+  
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+}
+
+.label {
+    color: black;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info {
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+.h-flexbox-container {
+    /* height: 700px; */
+    background-color: rgba(202, 15, 193, 0.055);
+    border: 1px solid white;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    flex-wrap: wrap;
+
+    /* flex-wrap: wrap;
+    justify-content: start;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    align-items: flex-end;
+    align-items: center;
+    align-items: flex-start; */
+}
+
+
+
+.single-item {
+    width: 100%;
+    background-color: rgba(202, 15, 193, 0.055);
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+.h-flexbox-item {
+    width: 100px;
+    margin: 10px;
+}
+
+.h-flexbox-item-1 {
+    flex-grow: 1;
+    /* flex-basis: 0; */
+}
+
+.h-flexbox-item-2 {
+    min-height: 20px;
+    /* flex-basis: 0; */
+}
+
+.h-flexbox-item-3 {
+    min-height: 20px;
+    flex-shrink: 0;
+    flex-grow: 3;
+    width: 300px;
+    /* flex-grow: 3; */
+    /* flex-basis: 0; */
+}
