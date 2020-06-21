@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="materialize/css/materialize.css">
     <link rel="stylesheet" href="style.css">
     <script src="materialize/js/materialize.js"></script>
-    <title>Document</title>
+    <script src="app.js"></script>
+    <title>Lorca Test App</title>
 </head>
-<body>
+<body onload="onStart((new Date()).toString())">
 
     <div class="wrapper">
-            <div class="single-item">
+            <div class="single-flex-item">
                         <p>
-                                <a class="waves-effect waves-light btn btn-large btn-flat red lighten-4
+                                <a id="activate" class="waves-effect waves-light btn btn-large btn-flat red lighten-4
                                 ">Send Message to Back-End</a>
                         </p>
             </div>        
@@ -22,7 +23,7 @@
                     <div class="card h-flexbox-item h-flexbox-item-2 green lighten-5">
 
                         <div class="card-content">
-                                <p>item 2</p>
+                                <p>app start</p>
                         </div>
   
 
@@ -30,18 +31,43 @@
 
                     <div class="card h-flexbox-item h-flexbox-item-3 green lighten-5">
                             <div class="card-content">
-                              <p class="monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fugiat recusandae ipsa suscipit aperiam est vel dignissimos culpa tenetur, voluptas debitis dicta porro? Tempora nemo eveniet aperiam voluptatum similique dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sit impedit debitis exercitationem tenetur aliquam. Qui praesentium nisi quam consequatur? Rem dignissimos, architecto doloremque ipsa voluptatibus quis quam repudiandae repellendus?</p>
+                              <p class="monospace" id="startup"></p>
                             </div>
                     </div>
 
 
             </div>
+
+
+
+            <div class="h-flexbox-container">
+                <div class="card h-flexbox-item h-flexbox-item-2 green lighten-5">
+
+                    <div class="card-content">
+                            <p>message out</p>
+                    </div>
+
+
+                </div> 
+
+                <div class="card h-flexbox-item h-flexbox-item-3 green lighten-5">
+                        <div class="card-content">
+                                <p id="message-out" class="monospace">click 'SEND MESSAGE TO BACK-END' to populate this field.</p>
+                                
+                        </div>
+                </div>
+
+
+        </div>
+
+
+
 
             <div class="h-flexbox-container">
                     <div class="card h-flexbox-item h-flexbox-item-2 green lighten-5">
 
                         <div class="card-content">
-                                <p>item 2</p>
+                                <p>message back</p>
                         </div>
   
 
@@ -49,7 +75,7 @@
 
                     <div class="card h-flexbox-item h-flexbox-item-3 green lighten-5">
                             <div class="card-content">
-                                    <p class="monospace">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta officia, culpa itaque voluptatibus quos est inventore nam eveniet minima excepturi amet enim veniam suscipit laborum quo nobis voluptatem ad doloremque.</p>
+                                    <p id="message-back" class="monospace">click 'SEND MESSAGE TO BACK-END' to populate this field</p>
                                     
                             </div>
                     </div>
@@ -63,11 +89,11 @@
 
                     <div class="card h-flexbox-item h-flexbox-item-3 green lighten-5">
                             <div class="card-content">
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta officia, culpa itaque voluptatibus quos est inventore nam eveniet minima excepturi amet enim veniam suscipit laborum quo nobis voluptatem ad doloremque.</p>
+                                    <p>On application load, the client (browser) triggers from the onload event a call to onStart - a JavaScript function that is registered by and listened for from the server (main go process).</p>
                                     
                             </div>
                             <div class="card-content">
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta officia, culpa itaque voluptatibus quos est inventore nam eveniet minima excepturi amet enim veniam suscipit laborum quo nobis voluptatem ad doloremque.</p>
+                                    <p>When the 'SEND MESSAGE TO BACK-END' button is clicked, it triggers an event to update the 'Clicked' element (above) and sends a text message comprising of a date time string to the back-end. The back-end returns a date in epoch form and a random name which are rendered in Message Returned.</p>
                                     
                             </div>
                     </div>
